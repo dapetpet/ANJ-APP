@@ -21,6 +21,9 @@ class PeriodicSchedule:
     def start(self, now: float) -> None:
         self.next_run = now + self.interval_s
 
+    def start_immediately(self, now: float) -> None:
+        self.next_run = now
+
     def remaining(self, now: float) -> float | None:
         if self.next_run is None:
             return None
