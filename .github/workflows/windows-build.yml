@@ -29,4 +29,3 @@ jobs:
         with:
           name: AutoKey-windows
           path: dist/AutoKey.exe
-
