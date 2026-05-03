@@ -1,0 +1,1 @@
+keyboard>=0.13.5pyinstaller>=6.6.0pytest>=8.2.2
