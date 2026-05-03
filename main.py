@@ -20,7 +20,7 @@ class KeyBackend:
             import keyboard
         except Exception as e:
             raise RuntimeError(
-                "缺少依赖 keyboard。请先运行：pip install -r requirements.txt"
+                "ç¼ºå°ä¾èµ keyboardãè¯·åè¿è¡ï¼pip install -r requirements.txt"
             ) from e
         self._keyboard = keyboard
 
@@ -84,8 +84,8 @@ class AutoKeyEngine:
                 return
             self._stop_event = threading.Event()
             now = time.monotonic()
-            self._state.r_schedule.start(now)
-            self._state.wf_schedule.start(now)
+            self._state.r_schedule.start_immediately(now)
+            self._state.wf_schedule.start_immediately(now)
             self._state.running = True
 
             self._threads = [
